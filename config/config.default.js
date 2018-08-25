@@ -13,7 +13,7 @@ module.exports = appInfo => {
     const config = {};
 
     // use for cookie sign key, should change to your own and keep security
-    config.keys = appInfo.name + '_yipage';
+    config.keys = appInfo.name + '_padipata';
 
     // 部署环境
     config.domain = 'http://127.0.0.1:7001';
@@ -31,8 +31,15 @@ module.exports = appInfo => {
     config.secretAccessKey = 'ghAk7j6iFRaL3lwJBD2ykUX3z9WXyr';
     // -----------------------------------------------------------
 
+    // ------------------------七牛云相关---------------------------
+    config.accessKey = '5hILYOS8yK0havuWevEe5R3Qh-AUEGwEvLjHvBuH';
+    config.secretKey = 'WWuWBxzWb71KHtihOkDjO7u-jOnh7q6FQd3jqjii';
+    config.bucket_name = 'wepy-map';
+    config.bucket_domain = 'http://pcpy68kg7.bkt.clouddn.com/';
+    // -----------------------------------------------------------
+
     // token凭证
-    config.jwtSecret = 'yipage';
+    config.jwtSecret = 'padipata';
 
     // 使用koa的中间件
     config.middleware = ['errorHandler'];
@@ -61,9 +68,9 @@ module.exports = appInfo => {
         },
     };
 
-    // 异常捕获路由
+    //异常捕获路由
     config.errorHandler = {
-        match: '/api/v2',
+        match: ['/api/v2', '/api/v1']
     };
 
     // 关闭安全威胁csrf的防范

@@ -185,19 +185,6 @@ module.exports = app => {
             return user.update(updates);
         }
 
-        // 获取用户列表
-        async list({offset = 0, limit = 10, order_by = 'created_at', order = 'ASC'}) {
-            const users = await this.ctx.model.User.findAndCountAll({
-                offset,
-                limit,
-                order: [[order_by, order.toUpperCase()]],
-            });
-            if (!users || users.length === 0) {
-                this.ctx.throw(404, '暂无用户');
-            }
-            return users;
-        }
-
         // 获取用户信息
         async find(open_id) {
             const user = await this.ctx.model.User.findById(open_id);

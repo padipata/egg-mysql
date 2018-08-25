@@ -11,6 +11,4 @@
 module.exports = app => {
     const apiV2Router = app.router.namespace('/api/v2');
     const {controller, middleware} = app;
-
-
 };
