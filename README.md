@@ -1,8 +1,8 @@
 # egg.js + mysql 后端模板
 
-
 [![powered by Egg.js][egg-image]][egg]
 
+[egg]: https://eggjs.org
 [egg-image]: https://img.shields.io/badge/Powered%20By-Egg.js-ff69b4.svg?style=flat-square
 
 ## 快速入门
