@@ -38,7 +38,7 @@ Use `EGG_SERVER_ENV=prod` to enable prod mode
 - 使用 `npm test` 来执行单元测试。
 - 使用 `npm run autod` 来自动检测依赖更新。
 
-### Docker 部署
+## Docker 部署
 
 ```docker
 # 打包镜像
